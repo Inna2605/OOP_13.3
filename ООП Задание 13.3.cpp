@@ -23,6 +23,7 @@ public:
 		y = b;
 	}
 
+
 	T getPointX() const{
 		return x;
 	}
@@ -39,6 +40,17 @@ public:
 	T setPointY(T b) {
 		y = b;
 		return y;
+	}
+
+	bool operator<(const Point<int>& point)const {
+		if (x < point.x) {
+			return true;
+		}
+		else if (x == point.x && y < point.y) {
+			return true;
+		}
+		else return false;
+		
 	}
 };
 
